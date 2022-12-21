@@ -2,6 +2,7 @@ package com.example.noh.hellotoast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -27,6 +28,12 @@ public class MainActivity extends AppCompatActivity {
         if (mShowCount != null) {
             mShowCount.setText(Integer.toString(mCount));
         }
+    }
+
+    public void onReset(View view) {
+        mCount = 0;
+        mShowCount.setText(Integer.toString(mCount));
+        Log.d("dev", "onReset: " + mCount);
     }
 
 }
